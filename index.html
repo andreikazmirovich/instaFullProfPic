@@ -33,12 +33,16 @@
     		margin-left: 20px;
     		width: 300px;
     	}
+    	#get{
+    		float: none;
+    	}
     </style>
 </head>
 <body>
 	<img src="">
 	<input type="text">
-	<button>GET</button>
+	<button id="get">GET</button>
+	<a href="" download><button id="download">Download</button></a>
 <script>
 	$("button").click(function(e) {
 		var h = $("input").val();
@@ -58,6 +62,7 @@
 	                    html.innerHTML = xhr.responseText;
 	                    var hhh = html.querySelector("meta[property='og:image']").getAttribute("content").replace("s150x150", "");
 	                    $("img").attr('src', hhh);
+	                    $("a").attr('href', hhh);
 	                    // console.log(hhh.attr("content").replace("s150x150", ""));
 	                    // c(html.querySelector("meta[property='og:image']"));
 	                }
