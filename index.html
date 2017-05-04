@@ -23,26 +23,46 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    	body{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	.clean{
+    		clear: both;
+    	}
     	img{
     		background-color: #F0E4E4;
     		width: 600px;
     		height: 600px;
-    		float: left;
+    		margin: 0 auto;
+    		display: block;
     	}
     	input{
     		margin-left: 20px;
     		width: 300px;
+    		float: left;
     	}
-    	#get{
-    		float: none;
+    	button{
+    		float: left;
+    		margin-left: 10px;
+    	}
+    	#tech{
+    		height: 50px;
+    		width: 461px;
+    		margin: 0 auto;
+    		margin-top: 50px;
+    		display: block;
     	}
     </style>
 </head>
 <body>
+	<div id="tech">
+		<input type="text">
+		<button id="get">GET</button>
+		<a href="" download><button id="download">Download</button></a>
+	</div>
+	<div class="clean"></div>
 	<img src="">
-	<input type="text">
-	<button id="get">GET</button>
-	<a href="" download><button id="download">Download</button></a>
 <script>
 	$("button").click(function(e) {
 		var h = $("input").val();
